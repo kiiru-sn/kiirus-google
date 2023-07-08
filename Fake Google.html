@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiiru's Google</title>
+    <style>
+      h1 {
+        text-align: right;
+        font-size: 13px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        padding: 5px;
+      }
+      .darkMode {
+        background: white;
+        border: white;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .darkMode:hover {
+        background: beige;
+        border: beige;
+        border-radius: 50px;
+      }
+
+      .gmail {
+        text-decoration: none;
+        color: black;
+      }
+      .gmail:hover {
+        text-decoration: underline;
+        color: black;
+      }
+
+      .images {
+        text-decoration: none;
+        color: black;
+      }
+      .images:hover {
+        text-decoration: underline;
+        color: black;
+      }
+
+      .googleApps {
+        background: white;
+        border: white;
+        color: grey;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .googleApps:hover {
+        background: lightgray;
+        border-radius: 100px;
+        border: lightgray;
+      }
+
+      .signIn {
+        margin: 0 auto 30px;
+        padding: 9.5px 27px;
+        font-size: 14px;
+        color: white;
+        background: blue;
+        border: none;
+        border-radius: 5px;
+      }
+      .signIn:hover {
+        box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+        cursor: pointer;
+        background: darkblue;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 30px;
+        padding-top: 95px;
+        width: 275px;
+      }
+      p {
+        display: block;
+      }
+      form {
+        width: 400px;
+        height: 30px;
+        border-radius: 20px;
+        display: flex;
+      }
+      input {
+        font: 16px system-ui;
+        color: black;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: lightgrey;
+      }
+      input:hover {
+        box-shadow: 2px 2px 2px lightgray;
+        cursor: text;
+        border-color: lightgray;
+      }
+      .googleSearch {
+        margin: 0 auto 30px;
+        padding: 9.5px 27px;
+        font-size: 14px;
+        color: black;
+        background: #f8f9fa;
+        border: none;
+        border-radius: 3px;
+      }
+      .googleSearch:hover {
+        border: 1px;
+        cursor: pointer;
+        box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+      }
+      .imFeelingLucky {
+        margin: 0 auto 30px;
+        padding: 9.5px 27px;
+        font-size: 14px;
+        color: black;
+        background: #f8f9fa;
+        border: none;
+        border-radius: 3px;
+      }
+      .imFeelingLucky:hover {
+        border: 1px;
+        cursor: pointer;
+        box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 13px;
+        font-weight: lighter;
+        font-family: sans-serif;
+      }
+      .gaeilge {
+        text-decoration: none;
+      }
+      .gaeilge:hover {
+        text-decoration: underline;
+      }
+      .darkTheme {
+        background-color: rgb(46, 46, 46);
+      }
+      .darkTheme .darkMode {
+        background: rgb(46, 46, 46);
+        border: white;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .darkTheme .darkMode:hover {
+        background: rgb(82, 82, 82);
+
+        border-radius: 50px;
+      }
+      .darkTheme .gmail {
+        text-decoration: none;
+        color: white;
+      }
+      .darkTheme .gmail:hover {
+        text-decoration: underline;
+        color: white;
+      }
+      .darkTheme .images {
+        text-decoration: none;
+        color: white;
+      }
+      .darkTheme .images:hover {
+        text-decoration: underline;
+        color: white;
+      }
+      .darkTheme .googleApps {
+        background: rgb(46, 46, 46);
+
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .darkTheme .googleApps:hover {
+        background: rgb(82, 82, 82);
+        border-radius: 100px;
+        border: lightgray;
+      }
+      .darkTheme input {
+        font: 16px system-ui;
+        color: black;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: lightgrey;
+        background: rgb(46, 46, 46);
+      }
+      .darkTheme input:hover {
+        cursor: text;
+        border-color: lightgray;
+        background: rgb(63, 63, 63);
+      }
+
+      .darkTheme .googleSearch {
+        margin: 0 auto 30px;
+        padding: 9.5px 27px;
+        font-size: 14px;
+        color: white;
+        background: rgb(63, 63, 63);
+        border: none;
+        border-radius: 3px;
+      }
+      .darkTheme .googleSearch:hover {
+        border: 1px;
+        cursor: pointer;
+      }
+      .darkTheme .imFeelingLucky {
+        margin: 0 auto 30px;
+        padding: 9.5px 27px;
+        font-size: 14px;
+        color: white;
+        background: rgb(63, 63, 63);
+        border: none;
+        border-radius: 3px;
+      }
+      .darkTheme .imFeelingLucky:hover {
+        border: 1px;
+        cursor: pointer;
+      }
+      .darkTheme h2 {
+        color: white;
+      }
+      .darkTheme .gaeilge {
+        text-decoration: none;
+        color: rgb(100, 141, 202);
+      }
+      .darkTheme .gaeilge:hover {
+        text-decoration: underline;
+        color: rgb(100, 141, 202);
+      }
+      .footer {
+        text-align: center;
+        padding-top: 225px;
+        font-size: 13px;
+        font-family: monospace;
+      }
+      .footerLink {
+        text-decoration: none;
+      }
+      .footerLink:hover {
+        text-decoration: underline;
+      }
+      .darkTheme .footer {
+        color: white;
+      }
+      .darkTheme .footerLink {
+        color: rgb(100, 141, 202);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <div>
+        <button class="darkMode">🌙</button>
+        &nbsp
+        <a
+          href="https://mail.google.com/mail/u/0/?ogbl#inbox"
+          target="_blank"
+          class="gmail"
+          >Gmail</a
+        >
+        &nbsp
+        <a
+          href="https://www.google.ie/imghp?hl=en&authuser=0&ogbl"
+          target="_blank"
+          class="images"
+          >Images</a
+        >
+        &nbsp &nbsp
+        <button class="googleApps">⁝⁝⁝</button>
+        &nbsp &nbsp
+        <button class="signIn">Sign In</button>
+      </div>
+    </h1>
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/342/original/580b57fcd9996e24bc43c51f.png?1681650445"
+    />
+    <p>
+      <center>
+        <form class="search">
+          <input type="text" placeholder=" 🔎︎ Search..." />
+        </form>
+      </center>
+      <center>
+        <br />
+        <br />
+
+        <button class="googleSearch">Google Search</button>
+        &nbsp &nbsp
+        <button class="imFeelingLucky">I'm Feeling Lucky</button>
+      </center>
+    </p>
+    <h2>
+      Google offered in:
+      <a href="https://www.gaeilge.ie/?lang=en" target="_blank" class="gaeilge"
+        >Gaeilge</a
+      >
+    </h2>
+    <footer class="footer">
+      Coded by
+      <a
+        href="https://www.linkedin.com/in/kiirustuart/"
+        target="_blank"
+        class="footerLink"
+        >Kiiru Stuart</a
+      >
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        //body.classList.toggle("dark");
+
+        if (body.classList.contains("darkTheme")) {
+          body.classList.remove("darkTheme");
+        } else {
+          body.classList.add("darkTheme");
+        }
+      }
+      let themeButton = document.querySelector(".darkMode");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
